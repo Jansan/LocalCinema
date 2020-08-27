@@ -27,6 +27,30 @@ namespace LocalCinema
                             isRunning = false;
                             break;
                         case 1:
+                            Console.WriteLine("How many of you are going to the cinema?");
+                            int goingCinema = Int32.Parse(Console.ReadLine());
+                            string[] people = new string[goingCinema];
+
+                            for (int i = 0; i < people.Length; i++)
+                            {
+                                Console.WriteLine($"Enter people age: {i + 1}");
+                                people[i] = Console.ReadLine();
+
+                            }
+                            
+                            int age = Int32.Parse(Console.ReadLine());
+                            if (age <= 20)
+                            {
+                                Console.WriteLine("Youth price is 80kr");
+                            }else if(age >= 64)
+                            {
+                                Console.WriteLine("Retirement price is 90kr");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Standard price 120kr");
+                            }
+                            Console.WriteLine("Number of people");
                             break;
                         case 2:
                             break;
@@ -38,7 +62,7 @@ namespace LocalCinema
                 }
                 else
                 {
-                    Console.WriteLine("It is incorrect menu selection.");
+                    Console.WriteLine("It is incorrect menu selection please try again.");
                 }
                 
 
