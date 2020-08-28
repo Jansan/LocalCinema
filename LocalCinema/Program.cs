@@ -76,8 +76,21 @@ namespace LocalCinema
                             
                             break;
                         case 3:
+                            Console.WriteLine("You enter a sentence with at least 3 words with space");
+                            string userMeaning = Console.ReadLine().Trim();
+                            string[] divideWord =  userMeaning.Split(" ");
+
+                            if (divideWord.Length < 3)
+                            {
+                                Console.WriteLine("You must write least 3 words");
+                            }
+                            else
+                            {
+                                Console.WriteLine(divideWord[2]); 
+                            }
                             break;
                         default:
+                            Console.WriteLine("It is incorrect menu.");
                             break;
                     }
                 }
