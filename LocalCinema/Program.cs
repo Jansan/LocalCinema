@@ -12,11 +12,13 @@ namespace LocalCinema
 
             while (isRunning)
             {
+                Console.WriteLine();
                 Console.WriteLine("Welcome to main menu entering numbers to different menu");
                 Console.WriteLine("Menu option [0] Shuts down the program");
                 Console.WriteLine("Menu option [1] Youth or pensioner");
                 Console.WriteLine("Menu option [2] Repeat ten times");
                 Console.WriteLine("Menu option [3] The third word");
+                
 
                 if (Int32.TryParse(Console.ReadLine(), out int results))
                 {
@@ -62,22 +64,16 @@ namespace LocalCinema
 
                             Console.WriteLine($"Number of people go to cinema: {goingCinema}");
                             Console.WriteLine($"Total cost go to cinema : {totalCost}");
-
-
-
-
-
-
-
                             break;
                         case 2:
-                            
-                            for (int i = 1; i < 11; i++)
+                            Console.WriteLine("Write text to display ten times");
+                            string userInput = Console.ReadLine();
+                            for (int i = 0; i < 10; i++)
                             {
-                                Console.WriteLine("");
-                                string userInput = Console.ReadLine();
-                                Console.WriteLine(userInput);
+                                Console.Write($"{i + 1}.{userInput},");
+
                             }
+                            
                             break;
                         case 3:
                             break;
